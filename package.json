@@ -16,5 +16,6 @@
     "start": "yarn develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clear": "rimraf .cache public"}
+    "clear": "rimraf .cache public"
+  }
 }
