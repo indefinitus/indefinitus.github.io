@@ -22,7 +22,7 @@ export default function TopLayout(props) {
           error: {
             main: red.A400,
           },
-          type: 0 ? 'dark' : 'light',
+          type: prefersDarkMode ? 'dark' : 'light',
         },
       }),
     [prefersDarkMode],
