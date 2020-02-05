@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import MuiLink from '@material-ui/core/Link';
 import ProTip from '../components/ProTip';
 import Link from '../components/Link';
+import { Helmet } from 'react-helmet';
 
 function Copyright() {
   return (
@@ -21,15 +22,20 @@ function Copyright() {
 
 export default function About() {
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          About Me
-        </Typography>
-        <Link to="/">Go to the main page</Link>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
+    <>
+      <Helmet>
+        <title>About Me</title>
+      </Helmet>
+      <Container maxWidth="sm">
+        <Box my={4}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            About Me
+          </Typography>
+          <Link to="/">Go to the main page</Link>
+          <ProTip />
+          <Copyright />
+        </Box>
+      </Container>
+    </>
   );
 }
