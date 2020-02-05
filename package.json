@@ -16,6 +16,7 @@
     "start": "yarn develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
+    "bs": "yarn run build && yarn run serve",
     "clear": "rimraf .cache public"
   }
 }
