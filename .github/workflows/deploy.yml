@@ -1,8 +1,8 @@
 name: Deploy
 
-on: 
+on:
   push:
-    branches: 
+    branches:
       - src
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
     - run: npm i -g yarn
     - run: yarn
     - run: yarn run build
-      
+
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.0.1
       with:
