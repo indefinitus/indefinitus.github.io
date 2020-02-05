@@ -2,10 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../../src/theme';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { red } from '@material-ui/core/colors';
 
 export default function TopLayout(props) {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const theme = React.useMemo(
+    () =>
+      createMuiTheme({
+        palette: {
+          primary: {
+            main: '#556cd6',
+          },
+          secondary: {
+            main: '#19857b',
+          },
+          error: {
+            main: red.A400,
+          },
+          type: 0 ? 'dark' : 'light',
+        },
+      }),
+    [prefersDarkMode],
+  );
   return (
     <React.Fragment>
       <Helmet>
