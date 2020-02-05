@@ -19,12 +19,12 @@ function Copyright() {
   );
 }
 
-export default function NotFound() {
+export default function About() {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
-          404...
+          About Me again
         </Typography>
         <Link to="/">Go to the main page</Link>
         <ProTip />
